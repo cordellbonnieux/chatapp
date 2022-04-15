@@ -19,6 +19,7 @@ firebase.initializeApp({
 
 const auth = firebase.auth()
 const firestore = firebase.firestore()
+const logo = ''
 
 function App() {
 
@@ -75,10 +76,13 @@ function ChatRoom() {
 
   return (
     <>
+      <header>
+        <img src={logo} alt='chatapp' />
+        <SignOut />
+      </header>
       <div>
         {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
       </div>
-
       <form onSubmit={sendMessage}>
         <input value={formValue} onChange={(e) => setFormValue(e.target.value)} />
         <button type="submit">submit</button>
@@ -92,9 +96,11 @@ function ChatMessage(props) {
 
   const messageClass = uid === auth.currentUser.uid ? 'sent' : 'recevied'
 
+  const img = <img src={photoURL} alt={`user's image`} />
+
   return (
     <div className={`message ${messageClass}`}>
-      <img src={photoURL} />
+      {img}
       <p>{text}</p>
     </div>
   )
