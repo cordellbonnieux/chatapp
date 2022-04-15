@@ -28,7 +28,8 @@ function App() {
   return (
     <div className="App">
       <header>
-
+        <img src={logo} alt='chatapp' />
+        <SignOut />
       </header>
       <section>
         { user ? <ChatRoom /> : <SignIn />}
@@ -76,16 +77,12 @@ function ChatRoom() {
 
   return (
     <>
-      <header>
-        <img src={logo} alt='chatapp' />
-        <SignOut />
-      </header>
-      <div>
+      <div id="messages">
         {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
       </div>
       <form onSubmit={sendMessage}>
         <input value={formValue} onChange={(e) => setFormValue(e.target.value)} />
-        <button type="submit">submit</button>
+        <button type="submit">send</button>
       </form>
     </>
   )
