@@ -79,6 +79,7 @@ section {
   color: #81c784;
   position: relative;
   height: 81vh;
+  animation: greenText 3s ease-in-out infinite alternate;
 }
 
 section #messages {
@@ -86,36 +87,38 @@ section #messages {
   max-height: 77vh;
 }
 
-section #messages .message {
-  animation: greenText 3s ease-in-out infinite alternate;
-}
-
 section form {
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
+  padding: 0 1em 0.5em 1em;
 }
 
-section form input, section form input::selection, section form button {
+section form input, section form button {
   margin: 0;
   border: 1px solid #81c784;
   animation: green 3s ease-in-out infinite alternate;
 }
 
 section form input {
-  width: 70vw;
+  width: 65%;
   height: 40px;
   background: #000;
   color: #81c784;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+section form input:focus {
+  outline: none !important ;
+  -moz-appearance:none;
 }
 
 section form button {
-  width: 20vw;
+  width: 15%;
   height: 46px;
   font-weight: bold;
+  margin-left: 2em;
   color: #000;
   cursor: pointer;
   background-color: #81c784;
@@ -131,7 +134,6 @@ section form button {
     box-shadow: 0 0 4px #fff, 0 0 6px #52f058, 0 0 8px #52f058, 0 0 10px #52f058, 0 0 12px #52f058;
   }
 }
-
 @keyframes greenText {
   from {
     text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #40bf45, 0 0 4px #40bf45, 0 0 5px #40bf45;
@@ -144,7 +146,7 @@ section form button {
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #52f058 #000;
+  scrollbar-color: #000 #52f058;
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -153,11 +155,11 @@ section form button {
 }
 
 *::-webkit-scrollbar-track {
-  background: #52f058;
+  background: #000;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #000;
+  background-color: #52f058;
   border-radius: 20px;
-  border: 3px solid #52f058;
+  border: 3px solid #000;
 }
