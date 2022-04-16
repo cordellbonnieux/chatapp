@@ -28,14 +28,27 @@ function App() {
   return (
     <div className="App">
       <header>
-        <img src={logo} alt='chatapp' />
-        <SignOut />
+        <h1>Chat App</h1>
+        { user ? <SignOut /> : <SignIn />}
       </header>
       <section>
-        { user ? <ChatRoom /> : <SignIn />}
+        { user ? <ChatRoom /> : <Landing />}
       </section>
     </div>
   );
+}
+
+function Landing() {
+  return (
+    <div>
+      <h2>A project by Cordell Bonnieux</h2>
+      <p>
+        This is a demonstration of a fullstack React.js application using a NoSQL
+        database via Firebase. Sign in with your Google account to leave a message, but please
+        don't leave any nasty messages!
+      </p>
+    </div>
+  )
 }
 
 function SignIn() {
