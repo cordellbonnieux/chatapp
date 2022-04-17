@@ -42,7 +42,7 @@ function App() {
 
 function Landing() {
   return (
-    <div>
+    <div id="landing">
       <h2>A project by Cordell Bonnieux</h2>
       <p>
         This is a demonstration of a fullstack React.js application using a NoSQL

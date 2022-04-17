@@ -75,23 +75,20 @@ header div button:hover span {
 }
 
 section {
-  padding: 2em 1em;
   color: #81c784;
   position: relative;
-  height: 81vh;
+  height: 100%;
   animation: greenText 3s ease-in-out infinite alternate;
 }
 
-section #messages {
+section #messages, section #landing {
   overflow-y: scroll;
   max-height: 77vh;
+  padding: 2em;
 }
 
 section form {
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  padding: 0 1em 0.5em 1em;
+  text-align: center;
 }
 
 section form input, section form button {
@@ -101,12 +98,12 @@ section form input, section form button {
 }
 
 section form input {
-  width: 65%;
-  height: 40px;
   background: #000;
   color: #81c784;
   font-size: 1em;
   font-weight: bold;
+  width: 60%;
+  padding: 8px;
 }
 
 section form input:focus {
@@ -115,10 +112,10 @@ section form input:focus {
 }
 
 section form button {
-  width: 15%;
-  height: 46px;
+  width: 20%;
+  padding: 9px 8px;
   font-weight: bold;
-  margin-left: 2em;
+  margin-left: 20px;
   color: #000;
   cursor: pointer;
   background-color: #81c784;
