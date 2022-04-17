@@ -67,7 +67,9 @@ function SignIn() {
 
 function SignOut() {
   return auth.currentUser && (
-    <button onClick={() => auth.signOut()}>Sign Out</button>
+    <button onClick={() => auth.signOut()}>
+      <span>Sign Out</span>
+    </button>
   )
 }
 
