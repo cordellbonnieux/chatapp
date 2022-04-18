@@ -1,4 +1,4 @@
-const functions = require("firebase-functions");
+
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
@@ -7,6 +7,8 @@ const functions = require("firebase-functions");
 //   functions.logger.info("Hello logs!", {structuredData: true});
 //   response.send("Hello from Firebase!");
 // });
+/*
+const functions = require("firebase-functions");
 
 const Filter = require('bad-words');
 
@@ -14,12 +16,13 @@ const admin = require('firebase-admin');
 admin.initializeApp();
 
 const db = admin.firestore();
-
+*/
 /*
 on create not accepting a function as param
 
 
-exports.detectEvilUsers = functions.firestore.document(`messages/{msgId}`).onCreate(create(doc, ctx));
+exports.detectEvilUsers =
+functions.firestore.document(`messages/{msgId}`).onCreate(create(doc, ctx));
 
 async function create(doc, ctx) {
     const filter = new filter();

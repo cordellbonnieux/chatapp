@@ -5,7 +5,7 @@ import 'firebase/compat/firestore'
 import 'firebase/compat/auth'
 
 import { useAuthState } from 'react-firebase-hooks/auth'
-import { useCollection, useCollectionData } from 'react-firebase-hooks/firestore'
+import { useCollectionData } from 'react-firebase-hooks/firestore'
 
 firebase.initializeApp({
   apiKey: "AIzaSyBQLP75avSXbBL1ulKUmFDnSHvsLXVFCEU",
@@ -19,7 +19,6 @@ firebase.initializeApp({
 
 const auth = firebase.auth()
 const firestore = firebase.firestore()
-const logo = ''
 
 function App() {
 
@@ -46,7 +45,8 @@ function Landing() {
       <h2>A project by Cordell Bonnieux</h2>
       <p>
         This is a demonstration of a fullstack React.js application using a NoSQL
-        database via Firebase. Sign in with your Google account (button above) to leave a message, 
+        database via Firebase. Sign in with your Google account (button above) 
+        to leave a message, 
         but please don't leave any nasty messages!
       </p>
     </div>
